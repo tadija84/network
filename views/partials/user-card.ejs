@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-content">
+        <p class="user-full-name paraf">Name: <span class="bold-name"> <%=`${itemFriend.firstName}`%>
+                <%=`${itemFriend.surname}`%></span>
+        </p>
+        <p class="user-age paraf">Age: <%=`${itemFriend.age}`%>
+        </p>
+        <% if (itemFriend.gender==="male" ) { %>
+            <div class="user-image male"></div>
+            <% }else{ %>
+                <div class="user-image female"></div>
+                <% }; %>
+
+        <a href="/userProfile/<%=`${itemFriend.id}`%>" class="select-user-button">View profile</a>
+    </div>
+</div>

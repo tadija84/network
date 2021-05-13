@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/jpg" href="/malePic.jpeg" />
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>My social network</title>
+</head>
+
+<body>
+    <section class="wrapper">
+        <h1>My social network</h1>
+    <% users.forEach(function(itemFriend) { %>
+        <%- include('partials/user-card', {itemFriend}); %>
+        <% }); %>
+    </section>
+</body>
+
+</html>

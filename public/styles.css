@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper{
+    width: 90vw;
+    margin:0 5vw;
+}
+h1{
+    width: 100%;
+    text-align: center;
+}
+h2{
+    width: 100%;
+    text-align: center;
+}
+.big-user{
+display: flex;
+width: 50vw;
+height: 50vh;
+align-self: center;
+margin: 0 auto;
+border: solid blue 1px;
+background-color: #f6f6f6;
+border-radius: 2vh;
+padding: 5vh 5vw;
+}
+.card{
+    display: block;
+    position: relative;
+    float: left;
+    width: 15%;
+    margin-left: 5%;
+    margin-bottom: 2vh;
+    height: 35vh;
+    border: solid blue 1px;
+    border-radius: 2vh;
+}
+.user-data{
+    width: 50%;
+}
+.sel-user-full-name,.sel-user-gender,.sel-user-age{
+    font-size: 1.3em;
+    line-height: 0.9;
+}
+.big-user-image{
+    width: 20vw;
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.paraf{
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 0.7;
+}
+.big-bold-name{
+    font-size: 1.5em;  
+}
+.bold-name{
+    font-weight: bold;
+}
+.user-image{
+    width: 100%;
+    height: 15vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.select-user-button{
+    display: flex;
+    position: relative;
+    background-color: rgb(20, 62, 197);
+    color: white;
+    width: 100px;
+    align-items: center;
+    margin: 2vh auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 4vh;
+}
+.female{
+    background-image: url(./femalePic.jpg)
+}
+.male{
+    background-image: url(./malePic.jpeg)
+}
+.friends-listed{
+    display: block;
+    margin: 5vh;
+}
+.friends-list{
+    display: block;
+    float: left;
+    position: relative;
+    background-color: #f6f6f6;
+    min-height: 35vh;
+    margin-bottom: 5vh;
+    width: 100%;
+}
+.no-sugested{
+    width: 100%;
+    text-align: center;
+}
+@media screen and (max-width: 900px) {
+    .card{
+        width: 30%;
+        margin-left: 3%;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .big-user{
+        width: 70vw;}
+  }
+  @media screen and (max-width: 600px) {
+    .card{
+        width: 40%;
+        margin-left: 5%;
+    }
+  }
+@media screen and (max-width: 460px) {
+    .wrapper{
+        width: 100vw;
+        margin:0;
+        padding-left: 0;
+    }
+    .big-user{
+        width: 90vw;}
+    .big-user-image{
+        width: 35vw;
+        height: 40vh;
+    }
+    .sel-user-full-name,.sel-user-gender,.sel-user-age{
+        font-size: 1.2em;
+        line-height: 1;
+    }
+    .big-bold-name{
+        font-size: 1.3em;  
+    }
+    .card{
+        width: 90%;
+        margin-left: 5%;
+     }
+  }

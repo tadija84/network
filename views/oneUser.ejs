@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/jpg" href="/malePic.jpeg" />
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:display=swap" rel="stylesheet">
+    <title>My social network</title>
+</head>
+
+<body>
+    <section class="wrapper">
+        <h1>User profile</h1>
+        <div class="big-user-card">
+            <div class="big-user">
+                <div class="user-data">
+                    <p class="sel-user-full-name">Name: <br> <span class="big-bold-name bold-name"><%=`${user.firstName}`%>
+                            <%=`${user.surname}`%></span>
+                    </p>
+                    <p class="sel-user-gender">Gender: <%=`${user.gender}`%>
+                    </p>
+                    <p class="sel-user-age">Age: <%=`${user.age}`%>
+                    </p>
+                </div>
+                <div class="user-pic">
+                    <% if (user.gender=="male" ) { %>
+                        <div class="big-user-image male"></div>
+                        <% }else{ %>
+                            <div class="big-user-image female"></div>
+                            <% }; %>
+                </div>
+            </div>
+        </div>
+        <div class="friends-listed"></div>
+
+        <div class="friends-list">
+            <h2>Friends of user</h2>
+            <% friends.forEach(function(itemFriend) { %>
+                <%- include('partials/user-card', {itemFriend}); %>
+                    <% }); %>
+        </div>
+
+        <div class="friends-list">
+            <h2>Friends of friends</h2>
+            <% friendsReduced.forEach(function(itemFriend) { %>
+                <%- include('partials/user-card', {itemFriend}); %>
+                    <% }); %>
+        </div>
+
+        <div class="friends-list">
+            <h2>Sugested friends</h2>
+            <% if (sugestedFriends.length>0) { %>
+                <% sugestedFriends.forEach(function(itemFriend) { %>
+                    <%- include('partials/user-card', {itemFriend}); %>
+                        <% }); %>
+                            <% } else {%>
+                                <p class="no-sugested">No sugested friends</p>
+                                <% }; %>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>
