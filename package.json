@@ -1,0 +1,20 @@
+{
+  "name": "soc-net",
+  "version": "1.0.0",
+  "description": "basic soc net simulation using node",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tadija84/network.git"
+  },
+  "author": "Tadija",
+  "license": "ISC"
+}
